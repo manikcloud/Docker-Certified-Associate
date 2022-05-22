@@ -58,7 +58,7 @@ resource "aws_instance" "ubuntu" {
   key_name               = aws_key_pair.deployer1.key_name
   vpc_security_group_ids = ["${aws_security_group.allow_SSH.id}"]
   tags = {
-    "Name" = "UBUNTU-Node"
+    "Name" = "UBUNTU-DCA"
     "ENV"  = "Dev"
   }
 #   user_data = "${file("docker-installation.sh")}"
