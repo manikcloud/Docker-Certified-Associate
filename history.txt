@@ -1,0 +1,125 @@
+x    1  docker ps 
+    2  curl localhost
+    3  docker info 
+    4  docker run hello-world
+    5  sudo apt-get remove docker docker-engine docker.io containerd runc
+    6  docker info 
+    7  sudo apt-get update
+    8  sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+    9  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+   10  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+   11    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   12  sudo apt-get update
+   13  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   14  apt install docker 
+   15  apt install docker.io
+   16  systemctl enable docker 
+   17  service docker enable 
+   18  chkconfig enable docker 
+   19  systemctl enable docker 
+   20  docker pull nginx
+   21  docker images 
+   22  docker ps 
+   23  docker run -d -P nginx
+   24  docker ps 
+   25  docker run -d -P nginx
+   26  docker ps 
+   27  docker run -d -P httpd
+   28  docker ps 
+   29  docker run -d -p80:80 httpd
+   30  docker ps 
+   31  docker run -d -P --name web httpd
+   32  docker ps 
+   33  docker rm web
+   34  docker stop web
+   35  docker ps 
+   36  docker ps -a
+   37  docker rm web
+   38  docker ps
+   39  docker rm a229f6911684
+   40  docker rm a229f6911684 -f
+   41  docker ps
+   42  docker ps -a
+   43  docker ps -aq
+   44  docker rm $(docker ps -aq) -f
+   45  docker ps -aq
+   46  docker imges 
+   47  docker images
+   48  docker rmi feb5d9fea6a5
+   49  docker run -d -P --name web httpd
+   50  docker ps 
+   51  docker rmi httpd
+   52  docker rmi httpd -f
+   53  docker ps 
+   54  docker images
+   55  docker rm $(docker ps -aq) -f
+   56  docker images -aq
+   57  docker rmi $(docker images  -aq) -f
+   58  docker images -aq
+   59  docker ps -aq
+   60  history 
+   61  apt update
+   62  docker run nginx
+   63  docker run -itd -P --name web ngnix
+   64  docker run -itd -P --name web nginx
+   65  docker ps 
+   66  docker run -i -P nginx
+   67  docker run  -P nginx
+   68  docker rm $(docker ps  -aq) -f
+   69  docker ps 
+   70  docker run  -d -P nginx
+   71  docker exec 346c366b76af
+   72  docker exec -i 346c366b76af
+   73  docker exec 346c366b76af /bin/bash
+   74  docker exec -i 346c366b76af /bin/bash
+   75  docker exec -i -t 346c366b76af /bin/bash
+   76  docker run -it httpd /bin/bash
+   77  docker run -itd httpd /bin/bash
+   78  docker container ps
+   79  docker container inspect 346c366b76af
+   80  docker container inspect 346c366b76af | grep -i IP
+   81  docker container logs 346c366b76af 
+   82  docker ps 
+   83  docker container logs 346
+   84  docker run -it httpd /bin/bash
+   85  docker run -it -P nginx /bin/bash
+   86  docker run -it ubuntu /bin/bash
+   87  docker run -it -P ubuntu /bin/bash
+   88  docker run -it -P ubuntu:htop /bin/bash
+   89  docker 
+   90  docker ps 
+   91  systemctl restart docker 
+   92  docker ps 
+   93  docker ps -a
+   94  docker run -d -P --name web --restart unless-stopped httpd 
+   95  docker ps 
+   96  systemctl restart docker 
+   97  docker ps 
+   98  docker ps -a
+   99  docker run hello-world
+  100  docker ps -a
+  101  docker run --rm hello-world
+  102  docker ps -a
+  103  docker run hello-world
+  104  docker ps -a
+  105  docker run --rm hello-world
+  106  docker ps -a
+  107  du -sh 
+  108  df -h 
+  109  docker system 
+  110  docker system df
+  111  docker ps
+  112  docker system df eb315874c7cb
+  113  docker system df --help
+  114  docker system df -v
+  115  docker run busybox
+  116  docker container run -dit --rm busybox ping -c5 fb.com
+  117  docker ps
+  118  docker container run -dit --rm busybox ping -c15 fb.com
+  119  docker ps
+  120  docker logs fb59bf629207
+  121  docker 
+  122  history 
+  123  pwd
+  124  history 
+  125  history >history.txt
