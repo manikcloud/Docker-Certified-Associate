@@ -8,7 +8,7 @@ echo " Set up the repository"
 # Update the apt package index and install packages to allow apt to use a repository over HTTPS:
 sleep 1
 sudo apt-get update -y
-sudo apt-get install ca-certificates curl gnupg lsb-release -y
+sudo apt-get install ca-certificates curl gnupg lsb-release git -y
 
 echo "Add Docker’s official GPG key:"
 

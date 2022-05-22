@@ -1,0 +1,41 @@
+   12  systemctl enable docker
+   13  docker pull nginx
+   14  docker images
+   15  docker ps
+   16  docker run -d -P nginx
+   17  docker ps
+   18  docker run -d -P nginx
+   19  docker ps
+   20  docker run -d -P httpd
+   21  docker ps
+   22  docker run -d -p80:80 httpd
+   23  docker ps
+   24  docker run -d -P --name web httpd
+   25  docker ps
+   26  docker rm web
+   27  docker stop web
+   28  docker ps
+   29  docker ps -a
+   30  docker rm web
+   31  docker ps
+   32  docker rm a229f6911684
+   33  docker rm a229f6911684 -f
+   34  docker ps
+   35  docker ps -a
+   36  docker ps -aq
+   37  docker rm $(docker ps -aq) -f
+   38  docker ps -aq
+   39  docker imges
+   40  docker images
+   41  docker rmi feb5d9fea6a5
+   42  docker run -d -P --name web httpd
+   43  docker ps
+   44  docker rmi httpd
+   45  docker rmi httpd -f
+   46  docker ps
+   47  docker images
+   48  docker rm $(docker ps -aq) -f
+   49  docker images -aq
+   50  docker rmi $(docker images  -aq) -f
+   51  docker images -aq
+   52  docker ps -aq
