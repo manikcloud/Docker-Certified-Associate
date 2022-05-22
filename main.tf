@@ -61,7 +61,27 @@ resource "aws_instance" "ubuntu" {
     "Name" = "UBUNTU-Node"
     "ENV"  = "Dev"
   }
-  user_data = "${file("docker-installation.sh")}"
+#   user_data = "${file("docker-installation.sh")}"
+# Type of connection to be established
+  connection {
+    type        = "ssh"
+    user        = "ubuntu"
+    private_key = file("./deployer")
+    host        = self.public_ip
+  }
+
+  provisioner "file" {
+    source      = "docker-installation.sh"
+    destination = "/tmp/docker-installation.sh"
+  }
+  # Remotely execute commands to install Java, Python, Jenkins
+  provisioner "remote-exec" {
+    inline = [
+        "chmod +x /tmp/docker-installation.sh",
+        "/tmp/docker-installation.sh args",
+    ]
+  }
+
 
   depends_on = [aws_key_pair.deployer1]
 
