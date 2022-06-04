@@ -173,3 +173,13 @@ ip r
 docker container inspect f5292fd0dc36
 netstat -tulpn | grep :80
 history | cut -c 8-
+
+
+###### MacVlan Network ##################
+
+docker network ls 
+docker network create -d macvlan   --subnet=172.16.86.0/24   --gateway=172.16.86.1   -o parent=eth0   my-macvlan-net
+docker network ls 
+docker run --rm -dit   --network my-macvlan-net   --name my-macvlan-alpine   alpine:latest   ash
+docker ps 
+docker container inspect my-macvlan-alpine
