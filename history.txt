@@ -159,3 +159,17 @@ docker inspect d5914e646930 | grep -i web-net
 history | cut -c 8- 
 docker network inspect web-net
 docker network inspect bridge
+
+
+################ Host network ############
+docker rmi $(docker images -aq) -f
+docker rm $(docker ps -aq) -f
+docker rmi $(docker images -aq) -f
+docker images 
+docker run -d --network host httpd
+curl localhost
+docker ps 
+ip r
+docker container inspect f5292fd0dc36
+netstat -tulpn | grep :80
+history | cut -c 8-
