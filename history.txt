@@ -183,3 +183,16 @@ docker network ls
 docker run --rm -dit   --network my-macvlan-net   --name my-macvlan-alpine   alpine:latest   ash
 docker ps 
 docker container inspect my-macvlan-alpine
+
+############################# Docker Swarm ####################################
+docker swarm init
+docker node ls 
+docker service ls 
+docker service create --name web --replicas 5 -P nginx 
+docker service create --name web --replicas 5 -p8080:80 nginx 
+docker service ls 
+docker service ps web
+docker ps 
+sudo docker service create --mode global --publish mode=host,target=80,published=8081 --name=service2 nginx:latest
+docker ps 
+curl localhost:8081
