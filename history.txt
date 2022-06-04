@@ -196,3 +196,5 @@ docker ps
 sudo docker service create --mode global --publish mode=host,target=80,published=8081 --name=service2 nginx:latest
 docker ps 
 curl localhost:8081
+
+docker swarm join-token worker
