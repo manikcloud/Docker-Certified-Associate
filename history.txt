@@ -125,3 +125,37 @@ history
 history >history.txt
 history | cut -c 8-
 history | cut -c 8- > history.txt 
+
+
+
+###################  Docker network ###########################
+
+docker network ls 
+docker 
+docker network 
+docker network create web-net1
+docker network ls 
+docker network rm web-net1
+docker network ls 
+docker ps 
+docker run -dP nginx 
+docker ps 
+docker network inspect d5914e646930
+docker inspect d5914e646930
+docker inspect d5914e646930 | grep -i mode
+docker network create web-net
+docker network ls 
+docker run -dP --network web-net nginx 
+docker ps 
+docker inspect b119c33b25a9
+docker inspect b119c33b25a9 | grep -i web-net
+history 
+history | cut -c 8- -
+history | cut -c 8- 
+docker ps 
+docker network ls 
+docker network connect web-net d5914e646930 
+docker inspect d5914e646930 | grep -i web-net
+history | cut -c 8- 
+docker network inspect web-net
+docker network inspect bridge
