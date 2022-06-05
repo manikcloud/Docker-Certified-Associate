@@ -287,3 +287,21 @@ docker stack ps stackdem
 docker stack 
 docker stack services 
 docker stack services stackdem
+
+############## Docker Scale UP  & Scale Down  ######
+
+docker service ls
+docker service scale redis=6
+docker service scale registry=6
+docker service ls
+docker service scale stackdem_redis=99
+docker service ls
+docker service scale stackdem_redis=2
+docker service ls
+docker service update --replicas=4 registry
+docker service ls
+docker service update --replicas=1 registry
+docker service ls
+docker service create --mode global --name nginx nginx:latest
+docker service ls
+docker service scale nginx=10
