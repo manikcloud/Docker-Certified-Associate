@@ -281,3 +281,9 @@ docker stack services stackdemo
 curl http://localhost:8000
 docker stack rm stackdemo
 curl http://localhost:8000\
+
+docker stack ps 
+docker stack ps stackdem 
+docker stack 
+docker stack services 
+docker stack services stackdem
