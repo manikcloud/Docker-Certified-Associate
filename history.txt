@@ -224,3 +224,19 @@ docker ps
 docker inspect 7ed855c9b000
 docker network inspect nginx-net1
 docker service inspect nginx-service1
+
+
+###### Docker golbal Service #####
+
+docker network create -d overlay my-overlay
+docker netwok ls 
+docker network ls 
+docker service create --replicas 3 --name my-web --network my-overlay nginx
+docker service ls 
+docker service inspect my-web
+docker service inspect my-web | grep -i overla
+sudo docker service create --mode global --publish mode=host,target=80,published=8080 --name=nginx nginx:latest
+docker service ls 
+docker service nginx ps
+docker service ps nginx
+history 
