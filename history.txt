@@ -209,3 +209,18 @@ docker run --dns 8.8.4.4 nicolaka/netshoot nslookup facebook.com
 
 
 ##### Docker  Overlay Network Creation  #####
+
+docker network create -d overlay nginx-net1
+docker network ls
+sudo docker service create --name nginx-service1 --publish target=80,published=80 --replicas=5 --network nginx-net1 nginx
+docker ps 
+docker service ls 
+docker service ps nginx-service1
+docker service inspect -180    Running             Running 54 seconds ago                       
+docker service inspect nginx-service1 
+docker service inspect nginx-service1 | grep -i nginx
+docker service inspect nginx-service1 | grep -i nginx-net1
+docker ps 
+docker inspect 7ed855c9b000
+docker network inspect nginx-net1
+docker service inspect nginx-service1
