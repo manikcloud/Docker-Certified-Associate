@@ -1,9 +1,10 @@
-#FROM 436174799454.dkr.ecr.us-east-1.amazonaws.com/httpd24:latest
-#FROM httpd:2.4
-FROM varunmanik/httpd:cicd
+# Use a smaller base image
+FROM httpd:2.4-alpine
 
 LABEL maintainer="Varun Manik"
 
+# Copy only the necessary files
 COPY ./index.html /usr/local/apache2/htdocs/
 
+# Expose the required port
 EXPOSE 80
