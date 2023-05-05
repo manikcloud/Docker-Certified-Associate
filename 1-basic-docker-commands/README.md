@@ -9,7 +9,11 @@
 
 1. **Clone the GitHub repo:**
 
+```
+
 git clone https://github.com/manikcloud/Docker-Certified-Associate.git
+```
+
 
 
 
