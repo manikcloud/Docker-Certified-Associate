@@ -46,57 +46,57 @@
 
 ## 1: Course Introduction
 
-1. What Is Docker?
-2. Features of Docker
-3. Virtual Machine vs. Docker
-4. Industries Using Docker
-5. Exam Information
-6. Examination Format
-7. Course Outline
-8. Course Outcome
-9. Course Components
-10. Customer Support
+    1. What Is Docker?
+    2. Features of Docker
+    3. Virtual Machine vs. Docker
+    4. Industries Using Docker
+    5. Exam Information
+    6. Examination Format
+    7. Course Outline
+    8. Course Outcome
+    9. Course Components
+    10. Customer Support
 
 ## 2: Introduction to Docker
 
-1. Docker Introduction
-2. Docker Engine
-3. Docker Properties
-4. Installation of Docker Community Edition
-5. Assisted practice: Install, Upgrade, and Uninstall Docker CE for Linux
-6. Assisted practice: Configure Docker Daemon to Start on Boot
-7. Docker: Architecture
-8. Assisted Practice: Images and Containers
-9. Knowledge Check
+    1. Docker Introduction
+    2. Docker Engine
+    3. Docker Properties
+    4. Installation of Docker Community Edition
+    5. Assisted practice: Install, Upgrade, and Uninstall Docker CE for Linux
+    6. Assisted practice: Configure Docker Daemon to Start on Boot
+    7. Docker: Architecture
+    8. Assisted Practice: Images and Containers
+    9. Knowledge Check
 
 ## 3: Image Creation, Management, and Registry
 
-1. Images
-2. Containers
-3. Service
-4. Overview and Instructions
-5. Assisted Practice: Create a Docker Image
-6. Layers of Images
-7. Flattening
-8. Docker Commit
-9. Tag an Image
-10. Assisted Practice: Image Tagging
-11. Filter and Format
-12. Basic Commands
-13. The copy-on-write (COW) Strategy
-14. Registry
-15. Repositories
-16. Private Repositories
-17. Docker Push, Content Trust, and Pull
-18. Assisted Practice: Deploy a registry
-19. Assisted Practice: Configure a registry
-20. Assisted Practice: Log in to a registry
-21. Assisted Practice: Push an Image to Docker Hub
-22. Assisted Practice: Push an image to a registry
-23. Prune Images and Containers
-24. Assisted Practice: Inspect, Remove and Prune Images
-25. Assisted Practice: Pull and Delete an Image
-26. Knowledge Check
+    1. Images
+    2. Containers
+    3. Service
+    4. Overview and Instructions
+    5. Assisted Practice: Create a Docker Image
+    6. Layers of Images
+    7. Flattening
+    8. Docker Commit
+    9. Tag an Image
+    10. Assisted Practice: Image Tagging
+    11. Filter and Format
+    12. Basic Commands
+    13. The copy-on-write (COW) Strategy
+    14. Registry
+    15. Repositories
+    16. Private Repositories
+    17. Docker Push, Content Trust, and Pull
+    18. Assisted Practice: Deploy a registry
+    19. Assisted Practice: Configure a registry
+    20. Assisted Practice: Log in to a registry
+    21. Assisted Practice: Push an Image to Docker Hub
+    22. Assisted Practice: Push an image to a registry
+    23. Prune Images and Containers
+    24. Assisted Practice: Inspect, Remove and Prune Images
+    25. Assisted Practice: Pull and Delete an Image
+    26. Knowledge Check
 
 ## 4: Networking
 
