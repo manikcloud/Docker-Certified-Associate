@@ -311,33 +311,34 @@
     7. Docker Kubernetes Service
     8. Kubernetes Orchestration for Docker Enterprise
     9. Security Features
-   10. Kubernetes Orchestration in UCP
+    10. Kubernetes Orchestration in UCP
 
 ### Routing traffic to Kubernetes Pods
-   11. Kubernetes Service
-   12. Assisted Practice: Create a Service to Route Traffic From Frontend to Backend Pods
-   13. Kubernetes ServiceTypes
-   14. Kubernetes Networking Model
+    11. Kubernetes Service
+    12. Assisted Practice: Create a Service to Route Traffic From Frontend to Backend Pods
+    13. Kubernetes ServiceTypes
+    14. Kubernetes Networking Model
 
 ### Persistent Storage to Kubernetes
-   15. Persistent Volumes
-   16. Assisted Practice: Configure a Pod to Use a PersistentVolume for Storage
-   17. Container Storage Interface
-   18. Storage Classes
+    15. Persistent Volumes
+    16. Assisted Practice: Configure a Pod to Use a PersistentVolume for Storage
+    17. Container Storage Interface
+    18. Storage Classes
 
 ### Deployments and Configurations
-   19. ReplicaSets
-   20. Workload Deployments
-   21. Configurations
-   22. Assisted Practice: Create a ConfigMap and Secret for a Pod
+    19. ReplicaSets
+    20. Workload Deployments
+    21. Configurations
+    22. Assisted Practice: Create a ConfigMap and Secret for a Pod
 
 ### RBAC (Role-Based Access)
-   23. Kubernetes grants
-   24. RBAC Authorization
+    23. Kubernetes grants
+    24. RBAC Authorization
+
 
 ### Course-end Assessment Instructions
-   25. Course-end Assessment Instructions
-   26. Knowledge Check
+    25. Course-end Assessment Instructions
+    26. Knowledge Check
 
 
 </details>
