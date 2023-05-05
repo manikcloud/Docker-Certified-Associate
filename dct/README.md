@@ -61,7 +61,11 @@ docker push varunmanik/httpd:signed
 Verify that the image is signed and uploaded to Docker Hub:
 
 
+```
+
 docker trust inspect --pretty varunmanik/httpd:signed
+```
+
 This guide demonstrates how to create a content trust, sign a Docker image, and upload it to Docker Hub using a custom signing key. Now, when someone pulls the varunmanik/httpd:signed image, they can be confident that it has been signed and verified.
 
 
