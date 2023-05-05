@@ -1,6 +1,9 @@
-Here's a step-by-step guide to creating a content trust and uploading a signed image to Docker Hub using the key name varun-dct and login name varunmanik:
+## Docker Content Trust with Signed Images
 
-Enable Docker Content Trust:
+Follow these steps to create a content trust, sign an image, and upload it to Docker Hub:
+
+1. **Enable Docker Content Trust:**
+
 
 
 ```
