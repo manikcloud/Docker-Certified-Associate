@@ -22,7 +22,7 @@ git clone https://github.com/manikcloud/Docker-Certified-Associate.git
 
 ```
 
-cd Docker-Certified-Associate
+cd Docker-Certified-Associate/1-basic-docker-commands/
 docker build -t varunmanik/httpd:latest .
 ```
 
