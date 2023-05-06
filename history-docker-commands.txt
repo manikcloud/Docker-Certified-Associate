@@ -1,0 +1,12 @@
+docker --version
+docker images 
+docker ps 
+docker ps -a
+docker ps -aq
+docker rm $(docker ps -aq) -f
+docker images -aq
+docker rmi $(docker images -aq)
+docker images -aq
+docker images 
+docker rmi $(docker images -aq) -f
+docker images 
