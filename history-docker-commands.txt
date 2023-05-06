@@ -10,3 +10,31 @@ docker images -aq
 docker images 
 docker rmi $(docker images -aq) -f
 docker images 
+history 
+cd Docker-Certified-Associate/
+ll
+history > history-docker-commands.txt
+history | cut -c 8- > history-docker-commands.txt
+git add . && git commit -am" history commands for docker  "
+git push 
+gitp ull 
+git pull 
+docker run nginx 
+docker run -i nginx 
+docker run -i -t  nginx 
+docker run -i -t  -p 80:80 nginx 
+docker run -d  -p 80:80 nginx 
+docker ps
+docker run -d  -P nginx 
+docker ps
+docker run -d -name nginx web-server -P nginx 
+docker run -d --name nginx web-server -P nginx 
+docker run -d --name=nginx web-server -P nginx 
+docker run -d --name=nginx-web-server -P nginx 
+docker ps 
+docker run -d  -P nginx 
+docker ps 
+docker rm $(docker ps -aq) -f
+dockerps 
+docker ps 
+history | cut -c 8- > history-docker-commands.txt
