@@ -38,3 +38,44 @@ docker rm $(docker ps -aq) -f
 dockerps 
 docker ps 
 history | cut -c 8- > history-docker-commands.txt
+git add . && git commit -am" history commands for docker  "&& git push 
+docker 
+docker create nginx
+docker ps -a
+docker stop 5248a517cf32
+docker ps -a
+docker ps 
+docker start 5248a517cf32
+docker ps 
+docker pause 5248a517cf32
+docker ps 
+docker start 5248a517cf32
+docker ps 
+docker stop V
+docker stop angry_wu
+docker ps 
+docker ps -a
+apt update 
+sudo apt update 
+docker pull debian:bullseye-slim
+docker images 
+docker run busybox ls -l 
+docker run nginx 
+docker run -d nginx 
+docker run -dt  -p 80:80 nginx 
+dokcer ps 
+docker ps 
+cd 2-Docker-image/
+ls
+docker build .
+docker build -t webserver:green .
+docker ps 
+docker run -d -P webserver:green
+docker ps 
+docker build -t webserver:blue .
+docker images 
+docker run -d -P webserver:blue
+docker ps 
+curl localhost
+curl localhost:49160
+history | cut -c 8- > history-docker-commands.txt
