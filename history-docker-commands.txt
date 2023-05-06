@@ -79,3 +79,20 @@ docker ps
 curl localhost
 curl localhost:49160
 history | cut -c 8- > history-docker-commands.txt
+git add . && git commit -am" history commands for docker  "&& git push 
+docker build -t webserver:blue .
+docker ps 
+docker inspect afe0c31ab571
+docker inspect $(docker ps -aq) | grep IPAddress
+docker ps -s
+docker images 
+cd ..
+git clone git@github.com:manikcloud/manik-python-flask-calculator.git
+cd manik-python-flask-calculator/
+ll
+docker build -t py-app .
+docker run -d -p 5000:5000 py-app:latest
+docker ps 
+docker stop py-app:latest
+cd ../Docker-Certified-Associate/
+history | cut -c 8- > history-docker-commands.txt
