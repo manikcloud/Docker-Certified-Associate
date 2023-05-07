@@ -170,10 +170,7 @@ This section will guide you to:
 - Create a Macvlan network in bridge mode with subnet, gateway, and parent values
 ```
 
-sudo docker network create -d macvlan 
---subnet=172.16.86.0/24 
---gateway=172.16.86.1 -o 
-parent=docker0 macvlan-net
+sudo docker network create -d macvlan --subnet=172.16.86.0/24 --gateway=172.16.86.1 -o parent=docker0 macvlan-net
  ```
 
 
