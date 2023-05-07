@@ -5,23 +5,48 @@ This section will guide you to:
 
 ### Step 1: Create the Dockerfile
 1. Create a directory:
+```
+   
    mkdir demo
    cd demo
+```
 
 2. Create the Dockerfile:
+```
+
    vi Dockerfile
+```
+
 
 3. Add the following code to the Dockerfile:
-   FROM ubuntu
-   RUN apt-get update
-   RUN apt-get install -y nginx
-   COPY index.nginx-debian.html /var/www/html
-   CMD nginx -g 'daemon off;'
+```
+   
+# Use Ubuntu as the base image
+FROM ubuntu
+
+# Update the package list
+RUN apt-get update
+
+# Install nginx
+RUN apt-get install -y nginx
+
+# Copy the custom index.html file to the default nginx directory
+COPY index.nginx-debian.html /var/www/html/index.nginx-debian.html
+
+# Start nginx in the foreground
+CMD ["nginx", "-g", "daemon off;"]
+
+```
+   
 
    Note: After writing the above code in the Dockerfile, press ESC button and enter :wq to save the file and exit the editor.
 
 4. Create another file in the same directory:
+```
+
    vi index.nginx-debian.html
+```
+
 
 5. Add the following welcome message to the index file:
    WELCOME TO NGINX.
