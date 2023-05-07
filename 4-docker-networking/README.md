@@ -1,3 +1,14 @@
+# Docker Network Types
+
+| Network Type | Description |
+|--------------|-------------|
+| `bridge`     | The default network type for containers. It creates an isolated network on the host and provides a private IP address to each container connected to it. Containers on the same bridge network can communicate with each other, while external access is provided through port mapping. |
+| `host`       | This network type removes network isolation between the container and the Docker host. Containers using the host network share the host's network stack and can directly access its network interfaces. |
+| `overlay`    | Designed for multi-host networking, the overlay network allows containers running on different Docker hosts to communicate with each other. This network type is useful for Docker Swarm and other distributed applications. |
+| `macvlan`    | The macvlan network type assigns a unique MAC address to each container and allows it to connect directly to the underlying physical network. This can be useful in situations where you want containers to appear as physical devices on the network. |
+| `none`       | This network type disables all networking for a container. It is useful for cases where you want to isolate a container completely from the network. |
+
+
 # Lesson 4 Demo 1: Create a Bridge Network
 Lesson 4 Demo 1: Create a Bridge Network
 
