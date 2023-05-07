@@ -196,9 +196,7 @@ sudo docker network inspect macvlan-net
 
 ```
 
-sudo docker run --rm -dit 
---network macvlan-net 
---name macvlan-alpine alpine:latest ash
+sudo docker run --rm -dit --network macvlan-net --name macvlan-alpine alpine:latest ash
 ```
 
  
@@ -235,8 +233,7 @@ sudo docker swarm init
 - Use --publish <PUBLISHED-PORT>:<SERVICE-PORT> to publish a port externally to the swarm:
 ```
 
-sudo docker service create --name service1 
---replicas 3 --publish published=8080,target=80 nginx
+sudo docker service create --name service1 --replicas 3 --publish published=8080,target=80 nginx
 ```
 
  
@@ -259,9 +256,7 @@ sudo docker service create --name service1
 - Use the mode=host option with --publish flag along with `--mode` global flag to publish a port directly on the swarm node
 ```
 
-sudo docker service create --mode global 
---publish mode=host,target=80,published=8081 
---name=service2 nginx:latest
+sudo docker service create --mode global --publish mode=host,target=80,published=8081 --name=service2 nginx:latest
 ```
 
  
