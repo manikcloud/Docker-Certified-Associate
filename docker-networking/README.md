@@ -48,10 +48,7 @@ sudo docker network rm my-net1
 
 ```
 
-sudo docker create --name my-nginx \
-  --network my-net \
-  --publish 8080:80 \
-  nginx:latest
+sudo docker create --name my-nginx  --network my-net   --publish 8080:80   nginx:latest
 ```
 
  
@@ -158,9 +155,9 @@ This section will guide you to:
 - Create a Macvlan network in bridge mode with subnet, gateway, and parent values
 ```
 
-sudo docker network create -d macvlan \
---subnet=172.16.86.0/24 \
---gateway=172.16.86.1 -o \
+sudo docker network create -d macvlan 
+--subnet=172.16.86.0/24 
+--gateway=172.16.86.1 -o 
 parent=docker0 macvlan-net
  ```
 
@@ -187,8 +184,8 @@ sudo docker network inspect macvlan-net
 
 ```
 
-sudo docker run --rm -dit \
---network macvlan-net \
+sudo docker run --rm -dit 
+--network macvlan-net 
 --name macvlan-alpine alpine:latest ash
 ```
 
@@ -226,7 +223,7 @@ sudo docker swarm init
 - Use --publish <PUBLISHED-PORT>:<SERVICE-PORT> to publish a port externally to the swarm:
 ```
 
-sudo docker service create --name service1 \
+sudo docker service create --name service1 
 --replicas 3 --publish published=8080,target=80 nginx
 ```
 
@@ -250,8 +247,8 @@ sudo docker service create --name service1 \
 - Use the mode=host option with --publish flag along with `--mode` global flag to publish a port directly on the swarm node
 ```
 
-sudo docker service create --mode global \
---publish mode=host,target=80,published=8081 \
+sudo docker service create --mode global 
+--publish mode=host,target=80,published=8081 
 --name=service2 nginx:latest
 ```
 
