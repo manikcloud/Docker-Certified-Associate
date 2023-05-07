@@ -8,14 +8,15 @@ Step 1: Pull a Docker image
 
 ```
     sudo  docker pull nginx:latest
-    ```
+```
     
 
  
 - List all the running images and check the newly pulled image:
+
 ```
     sudo  docker images
-    ```
+ ```
     
 
  
@@ -25,7 +26,7 @@ Step 2: Tag an image referenced by Image ID
 
 ```
     sudo  docker tag IMAGE_ID demo/nginx_img:version1.0
-    ```
+ ```
     
 
 Note: Replace IMAGE_ID with the Image ID of your nginx image from step 1.
@@ -37,7 +38,7 @@ Step 3: Tag an image referenced by name
 - Use the following command to tag the nginx image, referenced by Image name, into the demo repository with version2.0:
 ```
     sudo  docker tag IMAGE_NAME demo/nginx_img:version2.0
-    ```
+ ```
     
 
 Note: Replace IMAGE_NAME with the Name of your nginx image from step 2.
