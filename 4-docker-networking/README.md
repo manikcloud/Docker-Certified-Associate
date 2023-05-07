@@ -36,6 +36,13 @@ sudo docker network ls
 sudo docker network inspect mynetwork1
 ``` 
 
+- Create a continer & inspect the network 
+
+```
+docker run -itd --network my_net -P varunmanik/httpd:blue
+docker ps 
+docker inspect 270d114b6d9f
+```
 **Note:** A bridge driver is the default driver that automatically gets installed and configured while creating a network.
  
 --------------------------------------------------------------
