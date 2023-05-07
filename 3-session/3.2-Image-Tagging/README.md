@@ -31,8 +31,12 @@ Step 2: Tag an image referenced by Image ID
 
 ** Note:** Replace IMAGE_ID with the Image ID of your nginx image from step 1.
  
-** Note:** Use ```
-    sudo  docker images command to see the newly tagged image under demo/nginx_img repository.
+** Note:** Use sudo  docker images command to see the newly tagged image under demo/nginx_img repository.
+
+```
+sudo  docker images
+
+```
 
 Step 3: Tag an image referenced by name
 - Use the following command to tag the nginx image, referenced by Image name, into the demo repository with version2.0:
