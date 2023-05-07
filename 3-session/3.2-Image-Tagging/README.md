@@ -29,9 +29,9 @@ Step 2: Tag an image referenced by Image ID
  ```
     
 
-** Note:** Replace IMAGE_ID with the Image ID of your nginx image from step 1.
+**Note:** Replace IMAGE_ID with the Image ID of your nginx image from step 1.
  
-** Note:** Use sudo  docker images command to see the newly tagged image under demo/nginx_img repository.
+**Note:** Use sudo  docker images command to see the newly tagged image under demo/nginx_img repository.
 
 ```
 sudo  docker images
@@ -45,9 +45,9 @@ Step 3: Tag an image referenced by name
  ```
     
 
-** Note:** Replace IMAGE_NAME with the Name of your nginx image from step 2.
+**Note:** Replace IMAGE_NAME with the Name of your nginx image from step 2.
  
-** Note:** Use 
+**Note:** Use 
     sudo  docker images command to see the newly tagged image under demo/nginx_img repository.
 
 Step 4: Tag an image referenced by name and tag
@@ -56,9 +56,9 @@ Step 4: Tag an image referenced by name and tag
     sudo  docker tag IMAGE_NAME:IMAGE_TAG demo/nginx_img:version3.0.latest
 ```
     
-** Note:** Replace IMAGE_NAME and IMAGE_TAG with the Name and Tag of your nginx image from step 3.
+**Note:** Replace IMAGE_NAME and IMAGE_TAG with the Name and Tag of your nginx image from step 3.
  
-** Note:** Use 
+**Note:** Use 
     sudo  docker images command to see the newly tagged image under demo/nginx_img repository.
 
 Step 5: Tag an image for a private repository
@@ -67,7 +67,7 @@ Step 5: Tag an image for a private repository
     sudo  docker tag IMAGE_ID myregistry:5000/demo/nginx_img:version4.0
 ```
     
-** Note:** Replace IMAGE_ID with the Image ID of your nginx image from step 4.
+**Note:** Replace IMAGE_ID with the Image ID of your nginx image from step 4.
  
-** Note:** Use 
+**Note:** Use 
     sudo  docker images command to see the newly tagged image under myregistry:5000/demo/nginx_img repository.
