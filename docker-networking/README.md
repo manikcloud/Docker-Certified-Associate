@@ -101,7 +101,23 @@ This section will guide you to:
 sudo docker run --rm -d --network host --name nginx_container1 nginx
 
 ```
+nx
+- This command will run an Nginx Docker container with the following options:
 
+```
+sudo: Run the command with superuser privileges.
+docker run: Run a new Docker container using the specified image.
+--rm: Automatically remove the container when it exits. This is useful for keeping the system clean and removing temporary containers.
+
+-d: Run the container in detached mode, which means it will run in the background, and you won't see the output directly in your terminal.
+
+--network host: Use the host's network stack inside the container. This allows the container to use the same network interfaces as the host.
+
+--name nginx_container1: Assign a custom name to the container, in this case, "nginx_container1".
+nginx: The Docker image to use when creating the container. In this case, it's the official Nginx image.
+
+When you run this command, it will start an Nginx container using the official Nginx image, running in detached mode, with the host's network stack, and named "nginx_container1". The container will be automatically removed when it exits.
+```
 - **Note:** The host networking driver works only on Linux hosts and is not supported on Docker Desktop for Mac or Windows server.
 
 ### Step 2: Access the nginx container by browsing http://localhost:80/
