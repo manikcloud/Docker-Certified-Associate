@@ -5,7 +5,7 @@ docker build -t tomcat-java-app:v1 .
 docker run -itd --name java-cal -p 8081:8080 tomcat-java-app:v1
 docker ps
 cd ..
-ll
+ll 
 cd manik-python-flask-calculator/
 docker build -t python-calc-app:v1 .
 docker ps 
