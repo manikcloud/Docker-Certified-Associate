@@ -1,0 +1,28 @@
+git clone git@github.com:manikcloud/manik-calculator.git
+cd manik-calculator/
+
+docker build -t tomcat-java-app:v1 .
+docker run -itd --name java-cal -p 8081:8080 tomcat-java-app:v1
+docker ps
+cd ..
+ll
+cd manik-python-flask-calculator/
+docker build -t python-calc-app:v1 .
+docker ps 
+docker rm 48966a81924d -f
+docker ps 
+docker images
+docker run -itd --name python-calc -p5000:5000 python-calc-app:v1
+dockerps 
+docker ps 
+cd ..
+git clone git@github.com:manikcloud/manik-php-calculator.git
+cd manik-php-calculator/
+ls
+docker build -t php-calc-app .
+docker build -t php-calc-app:v1 .
+docker run -itd --name php-calc -p80:80 php-calc-app:v1
+docker ps 
+
+
+history | cut -c 8- > history-may-07-2023.txt
