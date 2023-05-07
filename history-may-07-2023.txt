@@ -1,11 +1,12 @@
 git clone git@github.com:manikcloud/manik-calculator.git
 cd manik-calculator/
-
+ls
+docker buid -t tomcat-java-app:v1 .
 docker build -t tomcat-java-app:v1 .
 docker run -itd --name java-cal -p 8081:8080 tomcat-java-app:v1
 docker ps
 cd ..
-ll 
+ll
 cd manik-python-flask-calculator/
 docker build -t python-calc-app:v1 .
 docker ps 
@@ -23,6 +24,50 @@ docker build -t php-calc-app .
 docker build -t php-calc-app:v1 .
 docker run -itd --name php-calc -p80:80 php-calc-app:v1
 docker ps 
+docker build -t php-calc-app:v1 .cd ..
+cd ..
+history | cut -c 8- > history-may-07-2023.txt
+cd Docker-Certified-Associate/
+history | cut -c 8- > history-may-07-2023.txt
+git add . &&  git commit -am"docker commands  && git push 
 
-
+git add . &&  git commit -am"docker commands"  && git push 
+cd ..
+mkdir dockertest
+cd dockertest/
+vim Dcokerfile
+docker build -t ubuntu:v1 .
+mv Dcokerfile Dockerfile
+docker build -t ubuntu:v1 .
+docker images
+docker run -itd --name ubuntu-v1 ubuntu:v1
+docker ps 
+docker ps
+docker exec ubuntu-v1 /bin/bash
+docker exec ubuntu-v1 
+docker exec -it ubuntu-v1 
+docker exec -it ubuntu-v1 /bin/bash
+docker ps 
+docker exec -i -t ubuntu-v1 /bin/bash
+docker images 
+docker ps 
+docker commit 3d6f8368ad48 ubuntu:v2-git
+docker images 
+docker run -itd ubuntu:v2
+docker run -itd ubuntu:v2-git
+docker ps
+docker exec -it 882bec81234d /bin/bash
+docker 
+docker ps 
+docker commit 882bec81234d ubuntu:v3-vim
+docker images 
+docker build -t ubuntu:v3-wget .
+docker images
+docker build -t ubuntu:v4-nginx
+docker build -t ubuntu:v4-nginx .
+docker build -t ubuntu:v5-index .
+docker build -t ubuntu:v6-nginx-start .
+docker run -itd -P ubuntu:v6-nginx-start
+docker ps 
+cd ../Docker-Certified-Associate/
 history | cut -c 8- > history-may-07-2023.txt
