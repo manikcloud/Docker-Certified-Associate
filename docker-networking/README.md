@@ -2,24 +2,24 @@
 Lesson 4 Demo 1: Create a Bridge Network
 
 This section will guide you to: 
-●	Create a default network in Docker
+- Create a default network in Docker
 
-●	Inspect the network for the network driver
+- Inspect the network for the network driver
 
 ## Step 1: Create a network that will take the bridge driver by default
-●	Use the following command to create a network:
+- Use the following command to create a network:
 ```
 sudo docker network create mynetwork1
 ``` 
 
-●	Use the following command to list current networks:
+- Use the following command to list current networks:
 ``` 
 
 sudo docker network ls
 ``` 
 
  
-●	Use the following command to inspect the network:
+- Use the following command to inspect the network:
 ``` 
 
 sudo docker network inspect mynetwork1
@@ -33,7 +33,7 @@ sudo docker network inspect mynetwork1
 
 This section will guide you to: 
 
-●	Create a user-defined bridge network
+- Create a user-defined bridge network
 
 ## Step 1: Create and delete a user-defined bridge network
 ```
@@ -94,11 +94,12 @@ sudo docker container inspect my-nginx
 
 This section will guide you to: 
 
-●	Create a standalone container that binds directly to the Docker host’s network
+- Create a standalone container that binds directly to the Docker host’s network
 
-●	Inspect the container to check the network mode
+- Inspect the container to check the network mode
 
 ## Step 1: Create and start a container as a detached process and use the host networking driver 
+
 ```
 sudo docker run --rm -d --network host --name nginx_container1 nginx
 
@@ -107,9 +108,9 @@ sudo docker run --rm -d --network host --name nginx_container1 nginx
 - **Note:** The host networking driver works only on Linux hosts and is not supported on Docker Desktop for Mac or Windows server.
 
 ## Step 2: Access the nginx container by browsing http://localhost:80/
-●	Click on the master tab and click on Desktop to open the Ubuntu desktop window
+- Click on the master tab and click on Desktop to open the Ubuntu desktop window
  
-●	Open the browser and navigate to http://localhost:80/
+- Open the browser and navigate to http://localhost:80/
  
 **Note:** Navigate back to the master tab with the Ubuntu Terminal
 ## Step 3: Inspect the container to check the NetworkMode under the HostConfig
@@ -148,13 +149,13 @@ sudo docker container stop nginx_container1
 
 This section will guide you to: 
 
-●	Create a Macvlan network in bridge mode
+- Create a Macvlan network in bridge mode
 
-●	Create an Alpine container and attach it to the Macvlan network
+- Create an Alpine container and attach it to the Macvlan network
 
 
 ## Step 1: Create a Macvlan network in bridge mode
-●	Create a Macvlan network in bridge mode with subnet, gateway, and parent values
+- Create a Macvlan network in bridge mode with subnet, gateway, and parent values
 ```
 
 sudo docker network create -d macvlan \
@@ -164,14 +165,14 @@ parent=docker0 macvlan-net
  ```
 
 
-●	List all the networks to check the newly created macvlan network
+- List all the networks to check the newly created macvlan network
 ```
 
 sudo docker network ls
 ```
 
  
-●	Inspect the macvlan network and check the Driver type
+- Inspect the macvlan network and check the Driver type
 ```
 
 sudo docker network inspect macvlan-net
@@ -182,7 +183,7 @@ sudo docker network inspect macvlan-net
 ## Step 2: Create an Alpine container and attach it to the Macvlan network
 
 
-●	Start an Alpine container and attach it to the macvlan-net network
+- Start an Alpine container and attach it to the macvlan-net network
 
 ```
 
@@ -192,7 +193,7 @@ sudo docker run --rm -dit \
 ```
 
  
-●	Inspect the macvlan-alpine container and observe MacAddress key in the Networks key
+- Inspect the macvlan-alpine container and observe MacAddress key in the Networks key
 ```
 
 sudo docker container inspect macvlan-alpine
@@ -200,7 +201,7 @@ sudo docker container inspect macvlan-alpine
 
  
  
-●	Run the following command to check how the container sees its network interfaces:
+- Run the following command to check how the container sees its network interfaces:
 ```
 
 sudo docker exec macvlan-alpine ip route
@@ -213,7 +214,7 @@ sudo docker exec macvlan-alpine ip route
 
 This section will guide you to: 
 
-●	Publish a swarm service’s port to external hosts in different ways
+- Publish a swarm service’s port to external hosts in different ways
 
 ## Step 1: Publish a swarm service’s port using the Routing Mesh
 **Note:** If Docker Swarm is not initialized on the master node, initialize docker swarm
@@ -222,7 +223,7 @@ This section will guide you to:
 sudo docker swarm init
 ```
 
-●	Use --publish <PUBLISHED-PORT>:<SERVICE-PORT> to publish a port externally to the swarm:
+- Use --publish <PUBLISHED-PORT>:<SERVICE-PORT> to publish a port externally to the swarm:
 ```
 
 sudo docker service create --name service1 \
@@ -236,7 +237,7 @@ sudo docker service create --name service1 \
 	docker service create --name service1 --replicas 3 -p 8080:80 nginx
 ```
 
-●	Use the following command to check whether your service has started on port 8080:
+- Use the following command to check whether your service has started on port 8080:
 ```
 
 	curl localhost:8080
@@ -246,7 +247,7 @@ sudo docker service create --name service1 \
 
 ## Step 2: Publish a swarm service’s port directly on the swarm node
 
-●	Use the mode=host option with --publish flag along with `--mode` global flag to publish a port directly on the swarm node
+- Use the mode=host option with --publish flag along with `--mode` global flag to publish a port directly on the swarm node
 ```
 
 sudo docker service create --mode global \
@@ -256,7 +257,7 @@ sudo docker service create --mode global \
 
  
 
-●	Use the following command to check whether your service has started on port 8081:
+- Use the following command to check whether your service has started on port 8081:
 ```
 
 	curl localhost:8081
@@ -269,7 +270,7 @@ sudo docker service create --mode global \
 
 This section will guide you to: 
 
-●	Configure Docker Daemon config file to use External DNS
+- Configure Docker Daemon config file to use External DNS
 
 ## Step 1: Create a file named daemon.json, which will be used as the Docker Daemon configuration file, to use external DNS
 ```
