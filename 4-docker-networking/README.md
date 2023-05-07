@@ -337,3 +337,67 @@ sudo docker run --dns 8.8.4.4 nicolaka/netshoot nslookup facebook.com
 
  
 
+----------------------------------------------------------
+
+## Docker Swarm Commands
+
+# Initialize a new swarm
+docker swarm init --advertise-addr <MANAGER-IP>
+
+# Join a swarm as a worker
+docker swarm join --token <WORKER-TOKEN> <MANAGER-IP:PORT>
+
+# Join a swarm as a manager
+docker swarm join-token manager
+docker swarm join --token <MANAGER-TOKEN> <MANAGER-IP:PORT>
+
+# Leave the swarm
+docker swarm leave
+
+# List nodes in the swarm
+docker node ls
+
+# Create a new service
+docker service create --replicas <NUMBER-OF-REPLICAS> --name <SERVICE-NAME> <IMAGE-NAME>
+
+# List services
+docker service ls
+
+# Update a service
+docker service update <SERVICE-ID>
+
+# Remove a service
+docker service rm <SERVICE-ID>
+
+# Scale a service
+docker service scale <SERVICE-ID>=<NUMBER-OF-REPLICAS>
+
+# Inspect a service
+docker service inspect <SERVICE-ID>
+
+# Display logs for a service
+docker service logs <SERVICE-ID>
+
+
+## Docker Swarm Command Example
+
+### Create a global service with custom published port and custom image
+
+```
+sudo docker service create \
+  --mode global \                         # Deploy one task per node in the swarm
+  --publish mode=host,target=80,published=8081 \ # Publish port 80 from the container to port 8081 on the host
+  --name=service2 \                      # Name the service "service2"
+  varunmanik/httpd:alpine               # Use a custom image "varunmanik/httpd:alpine"
+
+```
+
+
+In this example, we are creating a Docker service in Swarm mode with the following configurations:
+
+- The service is created in global mode, which means that it deploys one instance of the specified container on each node in the Swarm.
+
+- The service publishes port 80 of the container to port 8081 on the host using host mode, which maps the container port directly to the host port.
+
+- The service is named "service2".
+- The service uses a custom Docker image, varunmanik/httpd:alpine.
