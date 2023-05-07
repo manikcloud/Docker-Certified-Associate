@@ -225,12 +225,14 @@ This section will guide you to:
 
 ### Step 1: Publish a swarm service’s port using the Routing Mesh
 **Note:** If Docker Swarm is not initialized on the master node, initialize docker swarm
-	```
+	
+```
 
 sudo docker swarm init
 ```
 
 - Use --publish <PUBLISHED-PORT>:<SERVICE-PORT> to publish a port externally to the swarm:
+
 ```
 
 sudo docker service create --name service1 --replicas 3 --publish published=8080,target=80 nginx
@@ -238,12 +240,14 @@ sudo docker service create --name service1 --replicas 3 --publish published=8080
 
  
 **Note:** You can also write the above command it this way:
+
 ```
 
 	docker service create --name service1 --replicas 3 -p 8080:80 nginx
 ```
 
 - Use the following command to check whether your service has started on port 8080:
+
 ```
 
 	curl localhost:8080
