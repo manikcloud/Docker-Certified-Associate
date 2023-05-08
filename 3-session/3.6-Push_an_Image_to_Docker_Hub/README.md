@@ -80,12 +80,17 @@ CMD [“python”, “app.py”]
 	
 ```
 sudo docker build -t python_image .
- 
+
+```
+    
+
  
 - List all the running images to check the newly created image
 
 ```
 sudo docker images
+```
+    
  
 
 ## Step  2: Push the image to a Docker Hub repository
