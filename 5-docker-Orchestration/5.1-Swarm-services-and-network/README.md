@@ -1,6 +1,6 @@
 # Table of Contents
 
-1. [Lesson 5 Demo 1: Set up a Swarm Cluster with a Manager and Worker Node](#lesson-5-demo-1)
+1. [Lesson 5 Demo 1: Set up a Swarm Cluster with a Manager and Worker Node](#lesson-5-demo-1: Set up a Swarm Cluster with a Manager and Worker Node)
 2. [Lesson 5 Demo 2: Join Nodes to a Swarm](#lesson-5-demo-2)
 3. [Lesson 5 Demo 3: Create Replicated and Global Services](#lesson-5-demo-3)
 4. [Lesson 5 Demo 4: Running a Container vs. Running a Service](#lesson-5-demo-4)
