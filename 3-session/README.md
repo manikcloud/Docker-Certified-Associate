@@ -9,6 +9,12 @@ To clone this repository, use the following command:
 ```
 git clone git@github.com:manikcloud/Docker-Certified-Associate.git
 ```
+Navigate to the 3-session directory to access the content for this session.
+
+```
+cd Docker-Certified-Associate/3-session
+```
+
 ## Directory Structure
 
 - 3.1-Create-Docker-Image
