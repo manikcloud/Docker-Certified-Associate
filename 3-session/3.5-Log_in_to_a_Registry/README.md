@@ -1,40 +1,27 @@
-## Docker Private Registry on Port 5000
+# Lesson 3 Demo 5: Log in to a Registry
 
-### Step 1: Pull the Docker Registry Image
-1. Pull the official Docker registry image:
-    ```
-    docker pull registry:2
-    ```
+This section will guide you to:
+- Log in to a local Docker registry
 
-### Step 2: Run the Registry Container
-2. Run the registry container on port 5000:
-    ```
-    docker run -d -p 5000:5000 --name my-private-registry registry:2
-    ```
+## Step 1: Log in to a local Docker registry
+- Create a password file with a username and password used for logging in to the local registry
+```
+sudo  docker run --entrypoint htpasswd httpd:2.4 -Bbn USERNAME PASWORD > auth/httpd.htpasswd
 
-### Step 3: Push an Image to the Private Registry
-3. Pull an example image from Docker Hub (if not already pulled):
-    ```
-    docker pull nginx
-    ```
+```
 
-4. Tag the example image for your private registry:
-    ```
-    docker tag nginx localhost:5000/my-nginx
-    ```
+**Note:** Replace USERNAME and PASSWORD with your desired username and password respectively for docker login.
+ 
+**Note:** In case you get an error “No such file or directory”, you can install the apache2- utils package by executing the following command 
 
-5. Push the tagged image to your private registry:
-    ```
-    docker push localhost:5000/my-nginx
-    ```
+```
+sudo  apt-get install apache2-utils
+```
 
-### Step 4: Pull an Image from the Private Registry
-6. Remove the local copy of the example image to simulate pulling it from the private registry:
-    ```
-    docker image rm nginx localhost:5000/my-nginx
-    ```
+- Then find the path of htpasswd using the command whereis htpasswd. Next, you will have to change the path auth/httpd.htpasswd to the path shown after executing the whereis htpasswd command.
 
-7. Pull the example image from your private registry:
-    ```
-    docker pull localhost:5000/my-nginx
-    ```
+- Use the following command to login to the local registry created in the previous demo (Demo 3.4):
+
+```
+sudo  docker login localhost:5000
+``` 
