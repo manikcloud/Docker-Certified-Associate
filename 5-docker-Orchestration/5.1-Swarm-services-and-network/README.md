@@ -3,7 +3,7 @@
 1. [Lesson 5 Demo 1 - Set up a Swarm Cluster with a Manager and Worker Node](#lesson-5-demo-1-Set-up-a-Swarm-Cluster-with-a-Manager-and-Worker-Node)
 2. [Lesson 5 Demo 2 - Join Nodes to a Swarm](#lesson-5-demo-2-Join-Nodes-to-a-Swarm)
 3. [Lesson 5 Demo 3 - Create Replicated and Global Services](#lesson-5-demo-3-Create-Replicated-and-Global-Services)
-4. [Lesson 5 Demo 4 - Running a Container vs. Running a Service](#lesson-5-demo-4-Running-a-Container-vs.-Running-a-Service)
+4. [Lesson 5 Demo 4 - Running a Container vs. Running a Service](#lesson-5-demo-4-Running-a-Container-vs-Running-a-Service)
 5. [Lesson 5 Demo 5 - Create an Overlay Network](#lesson-5-demo-5-Create-an-Overlay-Network)
 6. [Lesson 5 Demo 6 - Deploy a Service on an Overlay Network](#lesson-5-demo-6-Deploy-a-Service-on-an-Overlay-Network)
 7. [Lesson 5 Demo 7 - Run a Container into a Running Service Under Swarm](#lesson-5-demo-7-Run-a-Container-into-a-Running-Service-Under-Swarm)
