@@ -79,7 +79,7 @@ CMD [“python”, “app.py”]
 - Build the Docker image from the newly created Dockerfile
 	
 ```
-sudo docker build -t python_image .
+sudo  docker build -t varunmanik/flask-python_hostname . 
 
 ```
     
@@ -105,14 +105,14 @@ sudo docker login
 - Use the following command to tag the Docker image:
 
 ```
-sudo docker tag python_image USERNAME/python_image:version1
+sudo docker tag varunmanik/flask-python_hostname varunmanik/flask-python_hostname:version1
 ```
 **Note:** Replace USERNAME with the username of your Docker Hub account.
 
 - Use the following command to push the Docker image to your Docker Hub repository:
 
 ```
-sudo docker push varunmanik/python_image:version1
+sudo docker push varunmanik/flask-python_hostname 
 ```
 -  Replace `varunmanik` with the username of your Docker Hub account.
  
