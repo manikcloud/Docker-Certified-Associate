@@ -22,7 +22,10 @@ sudo docker run --entrypoint htpasswd httpd:2.4-alpine -Bbn admin admin > auth/h
 --entrypoint htpasswd: Overrides the default entrypoint of the container with the htpasswd utility.
 - httpd:2.4-alpine: Specifies the Docker image to use, which is httpd:2.4-alpine.
 
-- -Bbn admin admin: Passes arguments to the htpasswd utility. -B uses bcrypt encryption, -b specifies that the password follows the username, and -n means the result will be displayed instead of saved to a file. admin admin sets the username and password to admin.
+- `-Bbn` admin admin: Passes arguments to the htpasswd utility. 
+`-B `uses bcrypt encryption, -b specifies that the password follows the username, and `-n` means the result will be displayed instead of saved to a file. 
+
+- `admin admin` sets the username and password to admin.
 
 - > auth/httpd.htpasswd: Redirects the output of the command to the auth/httpd.htpasswd file.
 
