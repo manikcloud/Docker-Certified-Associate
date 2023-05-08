@@ -5,10 +5,28 @@ This section will guide you to:
 
 ## Step 1: Log in to a local Docker registry
 - Create a password file with a username and password used for logging in to the local registry
-```
-sudo  docker run --entrypoint htpasswd httpd:2.4 -Bbn USERNAME PASWORD > auth/httpd.htpasswd
+
+1. Make sure the auth directory is created:
 
 ```
+mkdir -p auth
+```
+
+2. Run the Docker command using the httpd:2.4-alpine image to generate the httpd.htpasswd file with admin as both the username and password:
+
+```
+sudo docker run --entrypoint htpasswd httpd:2.4-alpine -Bbn admin admin > auth/httpd.htpasswd
+```
+
+- sudo docker run: Runs a Docker container.
+--entrypoint htpasswd: Overrides the default entrypoint of the container with the htpasswd utility.
+- httpd:2.4-alpine: Specifies the Docker image to use, which is httpd:2.4-alpine.
+
+- -Bbn admin admin: Passes arguments to the htpasswd utility. -B uses bcrypt encryption, -b specifies that the password follows the username, and -n means the result will be displayed instead of saved to a file. admin admin sets the username and password to admin.
+
+- > auth/httpd.htpasswd: Redirects the output of the command to the auth/httpd.htpasswd file.
+
+- This command generates an httpd.htpasswd file in the auth directory with admin as the username and password, using bcrypt encryption.
 
 **Note:** Replace USERNAME and PASSWORD with your desired username and password respectively for docker login.
  
