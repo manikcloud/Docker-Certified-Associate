@@ -1,4 +1,17 @@
-# Docker Network Types
+# Table of Contents
+
+1. [Docker Network Types](#docker-network-types)
+2. [Lesson 4 Demo 1: Create a Bridge Network](#lesson-4-demo-1-create-a-bridge-network)
+3. [Lesson 4 Demo 2: Create a User-Defined Bridge Network](#lesson-4-demo-2-create-a-user-defined-bridge-network)
+4. [Lesson 4 Demo 3: Create a Host Network](#lesson-4-demo-3-create-a-host-network)
+5. [Lesson 4 Demo 4: Create a Macvlan Network](#lesson-4-demo-4-create-a-macvlan-network)
+6. [Lesson 4 Demo 5: Publishing Ports](#lesson-4-demo-5-publishing-ports)
+7. [Lesson 4 Demo 6: Configure Docker to Use External DNS](#lesson-4-demo-6-configure-docker-to-use-external-dns)
+8. [Docker Swarm Commands](#docker-swarm-commands)
+
+
+
+## Docker Network Types
 
 | Network Type | Description |
 |--------------|-------------|
