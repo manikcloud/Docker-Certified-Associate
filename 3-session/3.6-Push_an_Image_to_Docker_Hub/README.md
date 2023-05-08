@@ -5,43 +5,76 @@ This section will guide you to:
 
 ## Step  1: Create a Docker image from the Dockerfile
 - Use the following commands to create a directory and navigate to it:
-	mkdir pythonapp
+```
+    
+    mkdir pythonapp
 	cd pythonapp
+```
+    
 - Use the following command to create a Python app:
+```
+    
 	nano app.py
+```
+    
  
 - Write the following code in the app.py file:
-	from flask import Flask
+
+```
+    
+from flask import Flask
 import os
 import socketapp = Flask(__name__)@app.route(“/”)def hello():
 html = “<h3>Hello {name}!</h3>” \
             “<b>Hostname:</b> {hostname}<br/>”
 return html.format(name=os.getenv(“NAME”, “world”), hostname=socket.gethostname()) if __name__ == “__main__”:
      app.run(host=’0.0.0.0', port=80)
+```
+    
  
 **Note:** Press Ctrl+X to exit the editor. Then type Y and press Enter to save the file.
 - Use the following command to create a requirements.txt file:
+```
+    
 	nano requirements.txt
+```
+    
  
 - Write the following code in the requirements.txt file:
+```
+    
 Flask
+```
+    
  
 **Note:** Press Ctrl+X to exit the editor. Then type Y and press Enter to save the file.
 - Use the following command to create a Dockerfile:
+```
+    
 nano Dockerfile
  
+```
+    
 - Write the following code in the Dockerfile:
-	FROM python
+```
+    
+FROM python
 WORKDIR /app
 ADD . /app
 RUN pip install -r requirements.txt
 EXPOSE 80
 ENV NAME world
 CMD [“python”, “app.py”]
+```
+    
  
 **Note:** Press Ctrl+X to exit the editor. Then type Y and press Enter to save the file.
 - Use the following command to list all the files created in the pythonapp folder:
+```
+    
 	ls
+```
+    
  
 - Build the Docker image from the newly created Dockerfile
 	
