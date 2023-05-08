@@ -113,6 +113,7 @@ sudo docker service ps myweb
 
  
 **Note**: Notice that the replicated service is running the service replicas on all the nodes of the swarm cluster.
+
 ---------------------------
 
 # Lesson 5 Demo 4: Running a Container vs. Running a Service 
