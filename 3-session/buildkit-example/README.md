@@ -2,6 +2,18 @@
 
 This repository demonstrates the usage of Docker BuildKit to build and run a Docker image.
 
+## What is Docker BuildKit?
+
+Docker BuildKit is a modern, high-performance builder toolkit for Docker images. It improves the build process by introducing features such as:
+
+- Concurrent building of multiple layers
+- Advanced layer caching
+- More efficient storage management
+- Support for new Dockerfile features and syntax
+
+BuildKit is designed to work with the current Dockerfile format but also enables the possibility of creating new frontend build systems with different syntax and features.
+
+
 ## Prerequisites
 
 - Docker (with BuildKit enabled)
