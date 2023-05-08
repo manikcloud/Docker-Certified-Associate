@@ -27,7 +27,7 @@ sudo docker run --entrypoint htpasswd httpd:2.4-alpine -Bbn admin admin > auth/h
 
 - `admin admin` sets the username and password to admin.
 
-- > auth/httpd.htpasswd: Redirects the output of the command to the auth/httpd.htpasswd file.
+- `> ` auth/httpd.htpasswd: Redirects the output of the command to the auth/httpd.htpasswd file.
 
 - This command generates an httpd.htpasswd file in the auth directory with admin as the username and password, using bcrypt encryption.
 
