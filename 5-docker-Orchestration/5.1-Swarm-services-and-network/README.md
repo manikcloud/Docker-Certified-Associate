@@ -3,7 +3,7 @@
 This section will guide you to: 
 - Set up a swarm cluster with a manager and worker node
 
-## Step 1: Create a swarm cluster and join the manager and worker node
+### Step 1: Create a swarm cluster and join the manager and worker node
 - On the master node, initialize the swarm
 
 ```
@@ -16,7 +16,7 @@ sudo docker swarm init
  
 - On worker1, join the swarm as a worker node using the 
 ```
-sudo docker swarm join command provided in the first ## Step
+sudo docker swarm join command provided in the first ### Step
 
 ```
 
@@ -36,7 +36,7 @@ sudo docker node ls
 This section will guide you to: 
 - Join a worker node to the swarm cluster in Docker
 
-## Step 1: Run the following command on the master node and copy the docker swarm join command as shown in the following screenshot:
+### Step 1: Run the following command on the master node and copy the docker swarm join command as shown in the following screenshot:
 
 ```
 sudo docker swarm join-token worker
@@ -45,14 +45,14 @@ sudo docker swarm join-token worker
 
  
 
-## Step 2: Click on the worker2 tab on the lab and navigate to the newly opened browser tab
+### Step 2: Click on the worker2 tab on the lab and navigate to the newly opened browser tab
  
 
-## Step 3: On worker2, join the swarm as a worker node using the docker swarm join command provided in the first ## Step
+### Step 3: On worker2, join the swarm as a worker node using the docker swarm join command provided in the first ### Step
  
 **Note**: Navigate back to the master node window
 
-## Step 4: On the master node, list all the nodes available in the swarm cluster
+### Step 4: On the master node, list all the nodes available in the swarm cluster
 
 ```
 sudo docker node ls
@@ -67,7 +67,7 @@ sudo docker node ls
 This section will guide you to: 
 - Create a replicated and a global service in Docker
 
-## Step 1: Create a replicated service with the nginx image
+### Step 1: Create a replicated service with the nginx image
 
 ```
 sudo docker service create --name myweb --replicas 3 nginx
@@ -76,7 +76,7 @@ sudo docker service create --name myweb --replicas 3 nginx
 
  
 
-## Step 2: Create a global service with the alpine image
+### Step 2: Create a global service with the alpine image
 
 ```
 sudo docker service create --name myservice --mode global alpine top
@@ -85,7 +85,7 @@ sudo docker service create --name myservice --mode global alpine top
 
  
 
-## Step 3: List all the Docker services
+### Step 3: List all the Docker services
 
 ```
 sudo docker service ls
@@ -94,7 +94,7 @@ sudo docker service ls
 
  
 
-## Step 4: Check the status of the global service i.e., myservice
+### Step 4: Check the status of the global service i.e., myservice
 
 ```
 sudo docker service ps myservice
@@ -104,7 +104,7 @@ sudo docker service ps myservice
  
 **Note**: Notice that the global service is running its instances on all the nodes of the swarm cluster.
 
-## Step 5: Check the status of the replicated service i.e., myweb
+### Step 5: Check the status of the replicated service i.e., myweb
 
 ```
 sudo docker service ps myweb
@@ -122,7 +122,7 @@ This section will guide you to:
 - Run a container from an image 
 - Run the image as a replicated service
 
-## Step 1: Check whether all the nodes in the swarm cluster are in Ready state
+### Step 1: Check whether all the nodes in the swarm cluster are in Ready state
 
 ```
 sudo docker node ls
@@ -131,7 +131,7 @@ sudo docker node ls
 
  
 
-## Step 2: Pull the latest version of nginx image from Docker Hub
+### Step 2: Pull the latest version of nginx image from Docker Hub
 
 ```
 sudo docker pull nginx:latest
@@ -140,7 +140,7 @@ sudo docker pull nginx:latest
 
  
 
-## Step 3: Run a container from the nginx image
+### Step 3: Run a container from the nginx image
 
 ```
 sudo docker container run -d \
@@ -150,7 +150,7 @@ sudo docker container run -d \
 
  
 
-## Step 4: List all the running containers to check the newly created nginx container
+### Step 4: List all the running containers to check the newly created nginx container
 
 ```
 sudo docker ps
@@ -159,7 +159,7 @@ sudo docker ps
 ```
 
 
-## Step 5: Run the nginx image as a service
+### Step 5: Run the nginx image as a service
 
 ```
 sudo docker service create \
@@ -170,7 +170,7 @@ sudo docker service create \
 
  
 
-## Step 6: List all the services running in the swarm cluster
+### Step 6: List all the services running in the swarm cluster
 
 ```
 sudo docker service ls
@@ -179,7 +179,7 @@ sudo docker service ls
 
  
 
-## Step 7: List all the tasks of the nginx-service
+### Step 7: List all the tasks of the nginx-service
 
 ```
 sudo docker service ps nginx-service
@@ -195,7 +195,7 @@ This section will guide you to:
 - Create an overlay network in a Docker swarm cluster
 - Create a replicated service to establish communication between service tasks
 
-## Step 1: Check the network drivers on the manager and worker nodes of the swarm cluster
+### Step 1: Check the network drivers on the manager and worker nodes of the swarm cluster
 - On the master tab, list all the networks and check the Driver type of swarm cluster 
 
 ```
@@ -217,7 +217,7 @@ sudo docker network ls
 **Note**: Notice that the Driver type of swarm cluster is overlay and its name is ingress.
 **Note**: Navigate back to the master tab to run commands on manager node
 
-## Step 2: Create an overlay network and run a replicated service on it
+### Step 2: Create an overlay network and run a replicated service on it
 - Use the following command to create an overlay network
 
 ```
@@ -296,7 +296,7 @@ sudo docker network rm nginx-net1
 This section will guide you to: 
 - Deploy a service on an overlay network
 
-## Step 1: Create an overlay network and attach a service to it
+### Step 1: Create an overlay network and attach a service to it
 - On the manager node, create an overlay network called nginx-net1
 
 ```
@@ -309,7 +309,7 @@ sudo docker service create --replicas 3 \
 --name my-web --network my-overlay nginx
  
 
-## Step 2: List the services and inspect the running service tasks
+### Step 2: List the services and inspect the running service tasks
 - List all the running services to check the newly created replicated service
 
 ```
@@ -333,7 +333,7 @@ sudo docker network inspect my-overlay
 This section will guide you to: 
 - Run a container into a running service under swarm
 
-## Step 1: Run the nginx image as a service in global mode, on each node in the swarm cluster
+### Step 1: Run the nginx image as a service in global mode, on each node in the swarm cluster
 
 ```
 sudo docker service create --mode global \
@@ -341,7 +341,7 @@ sudo docker service create --mode global \
 --name=nginx nginx:latest
  
 
-## Step 2: Create a nginx service running three replica containers on the swarm cluster
+### Step 2: Create a nginx service running three replica containers on the swarm cluster
 
 ```
 sudo docker service create \
@@ -349,7 +349,7 @@ sudo docker service create \
 --publish published=5050,target=80 nginx
  
 
-## Step 3: Check the status of each container instance running within the service:
+### Step 3: Check the status of each container instance running within the service:
 
 ```
 sudo docker service ps my_web
@@ -362,7 +362,7 @@ sudo docker service ps my_web
 This section will guide you to: 
 - Lock and unlock the swarm cluster in Docker
 
-## Step 1: On the master tab, use the following command to enable auto-locking on the existing swarm cluster
+### Step 1: On the master tab, use the following command to enable auto-locking on the existing swarm cluster
 
 ```
 sudo docker swarm update --autolock=true
@@ -370,7 +370,7 @@ sudo docker swarm update --autolock=true
 
 **Note**: Make sure you copy the unlock-key and save it for later use.
 
-## Step 2: Restart the docker daemon to check whether the swarm cluster is locked
+### Step 2: Restart the docker daemon to check whether the swarm cluster is locked
 
 
 ```
@@ -379,7 +379,7 @@ sudo systemctl docker restart
 sudo docker service ls
 ``` 
 
-## Step 3: Unlock the swarm cluster using the unlock-key saved in first ## Step
+### Step 3: Unlock the swarm cluster using the unlock-key saved in first ### Step
 
 ```
 sudo docker swarm unlock
@@ -387,7 +387,7 @@ sudo docker swarm unlock
 
 **Note**: To enter the unlock key, copy the key to the clipboard and paste in using Ctrl+Shift+V.
 
-## Step 4: Use the following command to view the current unlock key
+### Step 4: Use the following command to view the current unlock key
 
 ```
 sudo docker swarm unlock-key
@@ -397,7 +397,7 @@ sudo docker swarm unlock-key
 
  
 
-## Step 5: Use the following command to rotate the unlock key
+### Step 5: Use the following command to rotate the unlock key
 
 ```
 sudo docker swarm unlock-key --rotate
@@ -407,7 +407,7 @@ sudo docker swarm unlock-key --rotate
  
 **Note**: It is advisable to rotate the locked swarm’s unlock key on a regular schedule. Make sure you keep a record of the unlock-key to unlock the swarm cluster.
 
-## Step 6: To disable auto-locking on the existing swarm cluster, use the following command:
+### Step 6: To disable auto-locking on the existing swarm cluster, use the following command:
 
 ```
 sudo docker swarm update --autolock=false
@@ -417,7 +417,133 @@ sudo docker swarm update --autolock=false
  
 -----------------------
 
+# Lesson 5 Demo 9: Draining the Swarm Node
 
+This section will guide you to: 
+- Drain the swarm node in Docker
+
+#### Step 1: List all the active nodes
+
+```
+
+sudo docker node ls
+
+```
+
+ 
+
+#### Step 2: Start a replicated service using the redis image
+
+```
+sudo docker service create --replicas 3 \
+--name redis --update-delay 10s redis:3.0.6
+
+```
+
+ 
+
+#### Step 3: Check the tasks assigned to different nodes by the swarm manager
+
+```
+sudo docker service ps redis
+
+```
+
+ 
+
+#### Step 4: Drain a node that has a task assigned to it
+
+```
+sudo docker node update --availability \
+drain hostname_Worker1
+
+```
+
+**Note**: Replace hostname_Worker1 with the IP address of your worker1 node. In this case it is ip-172-31-26-147
+ 
+
+#### Step 5: Inspect the drained node and check the Availability of the node
+
+```
+sudo docker node inspect --pretty hostname_Worker1
+
+```
+
+**Note**: Replace hostname_Worker1 with the IP address of your worker1 node. In this case it is ip-172-31-26-147
+ 
+
+#### Step 6: Check the updated task assignments for the redis service by the swarm manager
+
+```
+sudo docker service ps redis
+
+```
+
+ 
+
+#### Step 7: Return the drained worker1 node to an active state
+
+```
+sudo docker node update --availability \
+active hostname_Worker1
+
+```
+
+**Note**: Replace hostname_Worker1 with the IP address of your worker1 node. In this case it is ip-172-31-26-147
+ 
+
+#### Step 8: Inspect the worker1 node again to see the updated Availability status
+
+```
+sudo docker node inspect --pretty hostname_Worker1
+
+```
+
+**Note**: Replace hostname_Worker1 with the IP address of your worker1 node. In this case it is ip-172-31-26-147
+ 
+------------------------------------
+
+# Lesson 5 Demo 10: Inspect a Service on Swarm
+
+This section will guide you to: 
+- Inspect a service on the Docker swarm
+
+#### Step 1: Start a replicated service using the redis image
+
+```
+sudo docker service create --replicas 3 --name redis redis:3.0.6
+
+```
+
+ 
+
+#### Step 2: Check the service tasks assigned to different nodes by the swarm manager
+
+```
+sudo docker service ps redis
+
+```
+
+ 
+
+#### Step 3: Inspect the redis service in an easily readable format
+
+```
+sudo docker service inspect --pretty redis
+
+```
+
+ 
+
+#### Step 4: Use the following command to return the service details in JSON format
+
+```
+sudo docker service inspect redis
+
+```
+
+ 
+-------------------------
 
 
 # Disclaimer
