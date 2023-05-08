@@ -1,5 +1,13 @@
 # Lesson 3 Demo 6: Push an Image to Docker Hub
 
+## Simple Flask Application
+
+This repository contains a minimal Flask application that displays a greeting message along with the hostname of the container it's running on.
+
+## Application Code
+
+The application is written in Python using the Flask web framework. The code is as follows:
+
 This section will guide you to: 
 - Push an image to Docker Hub
 
