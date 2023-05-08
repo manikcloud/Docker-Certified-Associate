@@ -1,13 +1,13 @@
 
 ## README: Copy-on-Write (COW) in Docker
 
-Copy-on-Write (COW) is a resource management strategy used by docker to optimize the way it handles storage for containers. This strategy allows docker to save storage space and minimize overhead by sharing common data between containers whenever possible.
+Copy-on-Write (COW) is a resource management strategy used by sudo docker to optimize the way it handles storage for containers. This strategy allows sudo docker to save storage space and minimize overhead by sharing common data between containers whenever possible.
 
 ### How it works
 
 When a container is created, docker uses a layered file system to store the container's data. Each layer corresponds to an instruction in the Dockerfile, such as adding a file or running a command. These layers are read-only and shared between containers that use the same base image.
 
-With the Copy-on-Write strategy, when a container needs to modify a file from its base image, docker does not make changes to the original shared layer. Instead, it creates a new writable layer on top of the existing layers and makes a copy of the file in this new layer. The container then modifies the copied file in the writable layer, leaving the original shared layer unchanged.
+With the Copy-on-Write strategy, when a container needs to modify a file from its base image, sudo docker does not make changes to the original shared layer. Instead, it creates a new writable layer on top of the existing layers and makes a copy of the file in this new layer. The container then modifies the copied file in the writable layer, leaving the original shared layer unchanged.
 
 ### Benefits
 
@@ -72,4 +72,4 @@ This example demonstrates the Copy-on-Write strategy in Docker, where containers
 
 ### Conclusion
 
-The Copy-on-Write strategy in docker optimizes storage usage, improves container startup time, and maintains resource isolation by sharing common data between containers and only creating copies of modified files when needed. This approach allows for better utilization of resources and a more efficient deployment of containers.
+The Copy-on-Write strategy in sudo docker optimizes storage usage, improves container startup time, and maintains resource isolation by sharing common data between containers and only creating copies of modified files when needed. This approach allows for better utilization of resources and a more efficient deployment of containers.
