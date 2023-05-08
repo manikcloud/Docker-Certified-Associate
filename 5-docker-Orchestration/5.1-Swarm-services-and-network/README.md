@@ -338,9 +338,11 @@ sudo docker service ps my-web
 
 ```
 sudo docker network inspect my-overlay
- 
- 
+```
+
+
 -----------------------
+
 
 # Lesson 5 Demo 7: Run a Container into a Running Service Under Swarm
 
