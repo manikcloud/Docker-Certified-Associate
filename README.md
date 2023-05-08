@@ -345,56 +345,6 @@
 </details>
 
 
-# FAQs
-
-**Q: I have queries regarding the content, whom should I contact?**
-
-A: You can reach out to your teaching assistant to share your feedback and views.
-
-**Q: Who is my teaching assistant?**
-
-A: Teaching assistants are technical personnel who are the point of contact for all course-related issues and feedback. They actively take part in delivering the best experience to our learners by helping them and trainers during the live virtual classes.
-
-**Q: How do I contact my teaching assistant?**
-
-A: Your Teaching Assistant (TA) will contact you as soon as you are onboard. You can request for the extensions/phone numbers and the official email address to interact with them.
-
-**Q: Will TAs help me in the session?**
-
-A: Yes, TAs will help you with any customer, labs, and content-related issues. TAs will be there to assist you online and offline as well.
-
-**Q: What is NPS? How does it affect me?**
-
-A: NPS is NET PROMOTER SCORE that is measured with a rating system.
-NPS = (Promoters - Detractors)/Total Surveys * 100.
-It affects you directly if fewer surveys are received or if the participants are rating the session as passive or detractors.
-
-**Q: What do promoters, passives, and detractors refer to?**
-
-A: Promoters are learners who rate the session 9 or 10. This indicates that they are happy with the session conducted for the day.
-Passives are learners who rate the session 7 or 8. This indicates that they are unhappy with the session conducted today, but they could follow you partially.
-Detractors are learners who rate from 0 to 6. This indicates that the session was not up to the mark and needs a lot of improvement.
-
-**Q: Should I follow the instructions?**
-
-A: Yes, these recommendations are tried and tested. It helped other trainers improve their NPS and we are sure that it will help you as well.
-
-**Q: Can I be creative?**
-
-A: Yes, provided you are trying to explain the concepts with visual aids such as Epic pen, and UML diagrams.
-
-**Q: I want to share some files with the learners. How do I do it?**
-
-A: You can use our community forum for communicating and sharing study material. Upload the files and then share the forum link in your classes.
-
-**Q: Can I share my contact details with the learners?**
-
-A: No. We strictly avoid sharing trainer details with learners. Our community forum is recommended for communicating, where learners can message you and discuss offline.
-
-**Q: I need more resources. Whom should I contact?**
-
-A: Please feel free to contact the Teaching Assistants (TAs) for the course.
-
 We wish you all the best for your upcoming training with us.
 Please contact your Teaching Assistants for further assistance and information.
 
