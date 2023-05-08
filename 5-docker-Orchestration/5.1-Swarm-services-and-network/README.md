@@ -372,19 +372,19 @@ sudo docker swarm update --autolock=true
 
 ## Step 2: Restart the docker daemon to check whether the swarm cluster is locked
 
-```
 
+```
 sudo systemctl docker restart
 
-```
 sudo docker service ls
- 
+``` 
 
 ## Step 3: Unlock the swarm cluster using the unlock-key saved in first ## Step
 
 ```
 sudo docker swarm unlock
- 
+```
+
 **Note**: To enter the unlock key, copy the key to the clipboard and paste in using Ctrl+Shift+V.
 
 ## Step 4: Use the following command to view the current unlock key
