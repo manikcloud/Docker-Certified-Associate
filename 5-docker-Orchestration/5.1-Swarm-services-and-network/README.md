@@ -306,9 +306,9 @@ sudo docker service inspect nginx-service1
 ```
 sudo docker service rm nginx-service1
 
-```
+
 sudo docker network rm nginx-net1
- 
+``` 
 
 ------------------------------
 
@@ -322,13 +322,14 @@ This section will guide you to:
 
 ```
 sudo docker network create -d overlay my-overlay
- 
+```
+
 - Create a nginx service and attach it to the newly created overlay network
 
 ```
 sudo docker service create --replicas 3 \
 --name my-web --network my-overlay nginx
- 
+``` 
 
 ### Step 2: List the services and inspect the running service tasks
 - List all the running services to check the newly created replicated service
