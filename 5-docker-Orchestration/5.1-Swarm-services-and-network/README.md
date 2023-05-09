@@ -363,7 +363,7 @@ This section will guide you to:
 sudo docker service create --mode global \
 --publish mode=host,target=80,published=8080 \
 --name=nginx nginx:latest
- 
+ ```
 
 ### Step 2: Create a nginx service running three replica containers on the swarm cluster
 
@@ -372,12 +372,12 @@ sudo docker service create \
 --name my_web --replicas 3 \
 --publish published=5050,target=80 nginx
  
-
+```
 ### Step 3: Check the status of each container instance running within the service:
 
 ```
 sudo docker service ps my_web
- 
+```
 -------------------------
 
 
