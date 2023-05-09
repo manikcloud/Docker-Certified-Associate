@@ -65,7 +65,12 @@ sudo docker swarm join-token worker
  
 
 ### Step 3: On worker2, join the swarm as a worker node using the docker swarm join command provided in the first ### Step
- 
+- for ex:-
+
+```
+
+docker swarm join --token SWMTKN-1-0r0umlaf7ib3o39ta4oecmbr7z4gd9gd5lmepvjl1nvnhzcuw7-e43znfunygqwmd5rp8hii0bfz 172.31.6.128:2377
+```
 **Note**: Navigate back to the master node window
 
 ### Step 4: On the master node, list all the nodes available in the swarm cluster
