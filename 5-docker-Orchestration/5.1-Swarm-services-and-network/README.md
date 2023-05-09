@@ -336,12 +336,12 @@ sudo docker service create --replicas 3 \
 
 ```
 sudo docker service ls
- 
+ ```
 - List the running service tasks deployed on the overlay network
 
 ```
 sudo docker service ps my-web
- 
+ ```
 - Inspect the overlay network to check which service tasks are running on the manager node
 
 ```
