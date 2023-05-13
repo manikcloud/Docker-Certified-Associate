@@ -396,8 +396,7 @@ sudo  apt install jq
 - Use the following command to inspect a specific task to determine which container is associated with the given service:
 
 ```
-sudo  docker inspect TASK_ID | jq -r \
-'.[].Status.ContainerStatus.ContainerID'
+sudo  docker inspect TASK_ID | jq -r '.[].Status.ContainerStatus.ContainerID'
 
 ```
 
