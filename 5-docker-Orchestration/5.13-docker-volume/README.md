@@ -241,7 +241,7 @@ sudo  docker info | grep 'Storage Driver'
 
 
 ----------------------------------------------------------------
-Lesson 5 Demo 16: Apply Node Labels, Inspect the Labels, and Filter Swarm Nodes by Labels
+# Lesson 5 Demo 16: Apply Node Labels, Inspect the Labels, and Filter Swarm Nodes by Labels
 
 This section will guide you to: 
 - Apply labels to swarm nodes
