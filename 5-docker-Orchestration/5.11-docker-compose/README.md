@@ -3,6 +3,13 @@
 This section will guide you to: 
 - Convert an application deployment into a stack using a file named docker-compose.yml
 
+| Feature | Docker Service | Docker Stack |
+|---------|----------------|--------------|
+| Definition | A Docker Service is the definition of the tasks to execute on the manager or worker nodes. It is a part of Docker Swarm, Docker's built-in orchestration solution. | A Docker Stack is a group of interrelated services that share dependencies, and can be orchestrated and scaled together. A stack effectively encapsulates a multi-service application. |
+| Use Case | Docker Services are ideal for deploying the same image across multiple environments. You can adjust the number of replicas for each service based on the environment's requirements. | Docker Stacks are perfect for defining and managing multi-service applications. Stacks allow you to manage all the services of an application with just one file. |
+| Scale | Services can be scaled up or down individually. | All services within a stack are scaled together, maintaining the application's functionality. |
+| Command | `docker service create` | `docker stack deploy` |
+
 ### Step 1: Drain the worker nodes in the swarm cluster to make sure the registry service runs on the manager node
 - List all the nodes present in the swarm cluster and ensure that all nodes are in Active state
 
