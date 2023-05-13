@@ -184,8 +184,11 @@ sudo  nano /etc/docker/daemon.json
 
 - Use the following code to change the default storage driver:
 **Note:** Please type the code snippet shown in the screenshot below in your terminal to avoid any errors rather than copy pasting the code.
+```
+{
 "storage-driver": "aufs"
- 
+}
+ ```
 **Note:** Press Ctrl+X to exit the editor. Then type Y and press Enter to save the file.
 - Use the following command to restart the Docker Daemon:
 	
