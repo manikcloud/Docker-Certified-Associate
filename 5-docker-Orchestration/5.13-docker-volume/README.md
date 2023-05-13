@@ -218,8 +218,11 @@ sudo  nano /etc/docker/daemon.json
 
 
 - Use the following code to change the current storage driver:
+```
+{ 
 	"storage-driver": "devicemapper "
- 
+}
+```
 **Note:** Press Ctrl+X to exit the editor. Then type Y and press Enter to save the file.
 - Use the following command to restart the Docker Daemon:
 	
