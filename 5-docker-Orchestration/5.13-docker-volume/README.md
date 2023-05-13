@@ -220,7 +220,7 @@ sudo  nano /etc/docker/daemon.json
 - Use the following code to change the current storage driver:
 ```
 { 
-	"storage-driver": "devicemapper "
+	"storage-driver": "devicemapper"
 }
 ```
 **Note:** Press Ctrl+X to exit the editor. Then type Y and press Enter to save the file.
@@ -241,71 +241,80 @@ sudo  docker info | grep 'Storage Driver'
 
 
 ----------------------------------------------------------------
-# Lesson 5 Demo 15: Select Storage Driver and Configure Device Mapper
+Lesson 5 Demo 16: Apply Node Labels, Inspect the Labels, and Filter Swarm Nodes by Labels
 
 This section will guide you to: 
-- Select a suitable storage driver
-- Configure the device mapper storage driver
+- Apply labels to swarm nodes
+- Inspect the node labels
+- Filter swarm nodes by labels
 
-### Step 1: Select a suitable storage driver
-- Open the daemon.json file to change the default storage driver to aufs
-	
+### Step 1:  Apply labels to swarm cluster nodes
+- Use the following command to list all the nodes in the swarm cluster:
+
 ```
-sudo  nano /etc/docker/daemon.json
+sudo  docker node ls
+  
+```
+
+
+- Use the following command to add a label to a swarm node:
+
+```
+sudo  docker node update --label-add workerNode hostname
  
 ```
 
-
-- Use the following code to change the default storage driver:
-**Note:** Please type the code snippet shown in the screenshot below in your terminal to avoid any errors rather than copy pasting the code.
-"storage-driver": "aufs"
+**Note**: Replace hostname with IP address of Worker1 node
  
-**Note:** Press Ctrl+X to exit the editor. Then type Y and press Enter to save the file.
-- Use the following command to restart the Docker Daemon:
-	
+- Use the following command to add multiple labels to a swarm node:
+
 ```
-sudo  service docker restart
+sudo  docker node update --label-add workerNode --label-add worker1 hostname
  
 ```
 
-
-- Use the following command to check the default storage driver:
-	
-```
-sudo  docker info | grep 'Storage Driver'
-
-```
-
+**Note**: Replace hostname with IP address of Worker1 node
  
-**Note:** You can select any storage driver that is suitable to your Docker engine version and requirements, from storage drivers like overlay, overlay2, device mapper, and aufs.
-	
-### Step 2: Configure the device mapper storage driver
-- Open the daemon.json file to change the default storage driver to device mapper
-	
-```
-sudo  nano /etc/docker/daemon.json
+- Use the following command to add a type label to identify nodes:
 
 ```
-
- 
-- Use the following code to change the current storage driver:
-	"storage-driver": "devicemapper "
- 
-**Note:** Press Ctrl+X to exit the editor. Then type Y and press Enter to save the file.
-- Use the following command to restart the Docker Daemon:
-	
-```
-sudo  service docker restart
-
-```
-
- 
-- Use the following command to check the default storage driver:
-	
-```
-sudo  docker info | grep 'Storage Driver'
+sudo  docker node update --label-add type=queue hostname
  
 ```
+
+**Note**: Replace hostname with IP address of Worker1 node
+ 
+
+### Step 2: Inspect the node labels
+- Use the following command to inspect a node for Labels:
+
+```
+sudo  docker node inspect hostname
+ 
+```
+
+**Note**: Replace hostname with IP address of Worker1 node
+ 
+- Use the following command to inspect a node with a specific output format to get the node’s labels:
+
+```
+sudo  docker node inspect --format ‘{{ .Spec.Labels }}’ hostname
+ 
+```
+
+**Note**: Replace hostname with IP address of Worker1 node. If you get any template error, you will need to replace single inverted commas (‘) with double inverted commas (“).
+ 
+
+### Step 3: Filter the swarm nodes based on Labels
+- Use the following command to filter swarm nodes based on Labels:
+
+```
+sudo  docker node ls -q | xargs 
+
+sudo  docker node inspect -f '{{ .ID }} [{{ .Description.Hostname }}]: {{ .Spec.Labels }}'
+ 
+```
+
 
 
 -----------------------------------------------------------------
