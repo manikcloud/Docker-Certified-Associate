@@ -40,7 +40,7 @@ sudo apt-get install containerd
 sudo apt-get install docker.io
 ```
 
-5. If none of the above works, you might want to consider using Docker's official installation script, which handles dependencies and configures Docker's repositories for you. You can use it like this:
+5. **If none of the above works**, you might want to consider using Docker's official installation script, which handles dependencies and configures Docker's repositories for you. You can use it like this:
 
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -83,12 +83,18 @@ https://github.com/manikcloud/Docker-Certified-Associate/tree/main/5-docker-Orch
 sudo docker image pull mirantis/ucp:3.4.4
  
 - Run the following command to install and register into MKE:
+
+```
+
 sudo docker container run --rm -it --name ucp \
 -v /var/run/docker.sock:/var/run/docker.sock \
 mirantis/ucp:3.4.4 install \
 --host-address <ip-master-node> \
 --controller-port 446 --interactive \
 --force-minimums
+
+```
+
 **Note:** Replace the <ip-master-node> in the command with the IP address of your master node; in this case, it is 172.31.43.212
  
 **Note:** Save your credentials for signing into MKE later and press enter for the additional aliases.
@@ -161,14 +167,23 @@ This lab has four subsections, namely:
 ### Step 1: List the insecure registries which you are going to run while running MSR
 - For Ubuntu 14.x, open the /etc/default/docker file in your terminal, and edit the DOCKER_OPTS parameter
 DOCKER_OPTS="--insecure-registry <registry.example.com> -H tcp://127.0.0.1:2375 -H unix:///var/run/docker.sock"
+
 **Note:** Replace <registry.example.com> with the private IP address of worker1 node, where you are going to install MSR
 - For Ubuntu 16.x or CentOS, edit or create /etc/docker/daemon.json, and add this to the file:
+
+```
 {
     "insecure-registries" : ["registry.example.com"]
 }
+
+```
 **Note:** Replace registry.example.com with the private IP address of worker1 node, where you are going to install MSR
 - Restart Docker Daemon with the following command:
+
+```
 sudo service docker restart
+
+```
 
 ### Step 2: Get the MSR installation command from Admin Settings in MKE
 - In MKE, go to Admin Settings, and click on Mirantis Secure Registry
@@ -178,7 +193,11 @@ sudo service docker restart
 
 ### Step 3: Run the MSR installation command in Docker CLI
 - Open the terminal, and run the copied command. You can also use the following command to install MSR:
+
+```
 docker run -it --rm docker/dtr install --ucp-node ip-<ip-address> --ucp-username abharathour --ucp-url https://172.31.49.85:436 --ucp-insecure-tls
+
+```
 **Note:** Replace <ip-address> with the private IP address of worker1 node
  
 
