@@ -72,7 +72,7 @@ This lab has two subsections, namely:
 1.	Pulling images from mirantis/ucp and installing MKE on the master node
 2.	Signing into MKE from the desktop browser
 
-**Note:** Before starting this demo, make sure all the nodes are connected to a swarm cluster with the master node acting as a manager node. Refer to practice project 5.8 (# Lesson 5 Demo 1: Set up a Swarm Cluster with a Manager and Worker Node) and 5.9 (# Lesson 5 Demo 2: Join Nodes to a Swarm), if you need help with the process. 
+**Note:** Before starting this demo, make sure all the nodes are connected to a swarm cluster with the master node acting as a manager node. Refer to practice project 5.8 (# Lesson 5 Demo 1: Set up a Swarm Cluster with a Manager and Worker Node) and 5.9 (# Lesson 5 Demo 2: Join Nodes to a Swarm), if you need help with the process.
 - Form more details click here:
 
 https://github.com/manikcloud/Docker-Certified-Associate/tree/main/5-docker-Orchestration/5.1-Swarm-services-and-network
