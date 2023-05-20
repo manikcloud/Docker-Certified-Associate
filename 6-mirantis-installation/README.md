@@ -206,14 +206,17 @@ sudo service docker restart
 ### Step 2: Get the MSR installation command from Admin Settings in MKE
 - In MKE, go to Admin Settings, and click on Mirantis Secure Registry
  
-- To create an MSR instance, select a MKE Node, tick the Disable TLS verification for UCP checkbox, and click on Copy to Clipboard to copy the command to install DTR
+- To create an MSR instance, 
+- select a MKE Node, 
+- tick the Disable TLS verification for UCP checkbox, and 
+- click on Copy to Clipboard to copy the command to install DTR
  
 
 ### Step 3: Run the MSR installation command in Docker CLI
 - Open the terminal, and run the copied command. You can also use the following command to install MSR:
 
 ```
-docker run -it --rm docker/dtr install --ucp-node ip-<ip-address> --ucp-username abharathour --ucp-url https://172.31.49.85:436 --ucp-insecure-tls
+docker run -it --rm docker/dtr install --ucp-node ip-<ip-address> --ucp-username admin --ucp-url https://172.31.49.85:436 --ucp-insecure-tls
 
 ```
 **Note:** Replace <ip-address> with the private IP address of worker1 node
@@ -221,7 +224,10 @@ docker run -it --rm docker/dtr install --ucp-node ip-<ip-address> --ucp-username
 
 ### Step 4: Verify that the MSR is successfully installed
 
-- Once the installation is complete, navigate to Admin Setting-> Mirantis Secure Registry in MKE Web UI. You will see the installed MSR IP address
+- Once the installation is complete, 
+- Navigate to Admin Setting-> Mirantis Secure Registry in MKE Web UI. 
+
+You will see the installed MSR IP address
 - Go to MSR IP address (172.31.49.85, in this case), and you will see the DTR Sign in page
  
 **Note:** For the sign in process, use the same login credentials as of MKE web UI.
