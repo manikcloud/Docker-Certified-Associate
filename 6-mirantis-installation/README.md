@@ -94,7 +94,23 @@ mirantis/ucp:3.4.4 install \
 --force-minimums
 
 ```
+for ex:
+```
 
+sudo docker container run --rm -it --name ucp -v /var/run/docker.sock:/var/run/docker.sock mirantis/ucp:3.4.4 install --host-address 172.31.6.128 --controller-port 446 --interactive --force-minimums
+
+```
+
+### Other Docker Commands
+```
+ip r
+kubectl get pods 
+docker ps 
+docker network ls
+docker service ls
+docker volume ls
+docker stack ls
+```
 **Note:** Replace the <ip-master-node> in the command with the IP address of your master node; in this case, it is 172.31.43.212
  
 **Note:** Save your credentials for signing into MKE later and press enter for the additional aliases.
