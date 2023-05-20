@@ -182,7 +182,9 @@ This lab has four subsections, namely:
 
 ### Step 1: List the insecure registries which you are going to run while running MSR
 - For Ubuntu 14.x, open the /etc/default/docker file in your terminal, and edit the DOCKER_OPTS parameter
+```
 DOCKER_OPTS="--insecure-registry <registry.example.com> -H tcp://127.0.0.1:2375 -H unix:///var/run/docker.sock"
+```
 
 **Note:** Replace <registry.example.com> with the private IP address of worker1 node, where you are going to install MSR
 - For Ubuntu 16.x or CentOS, edit or create /etc/docker/daemon.json, and add this to the file:
