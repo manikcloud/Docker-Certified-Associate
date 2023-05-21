@@ -238,12 +238,12 @@ kubectl describe service service-demo
 
 ```
 kubectl get service
- 
+ ```
 - Use the ubuntu image to create the frontend pod
 
 ```
 kubectl run -it ubuntu --image=ubuntu
- 
+ ```
 - Use the following commands to install curl
 
 ```
