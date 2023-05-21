@@ -386,7 +386,6 @@ spec:
 ```
 kubectl apply -f storage/pv-claim.yaml
 
-```
 kubectl get pv task-pv-volume
 
 ```
