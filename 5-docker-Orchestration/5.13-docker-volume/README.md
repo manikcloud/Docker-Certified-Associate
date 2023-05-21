@@ -452,7 +452,10 @@ sudo  nano /etc/docker/daemon.json
 
  
 - Add the following code in the daemon.json file to set the logging driver to syslog:
+
+```
 	"log-driver": "syslog"
+```
  
 **Note:** Press Ctrl+X to exit the editor. Then type Y and press Enter to save the file.
 - Use the following command to restart the Docker daemon:
