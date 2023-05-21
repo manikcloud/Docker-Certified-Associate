@@ -435,7 +435,6 @@ spec:
 ```
 kubectl apply -f storage/pv-pod.yaml
 
-```
 kubectl get pod task-pv-pod
 
 ```
