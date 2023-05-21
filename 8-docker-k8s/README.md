@@ -279,12 +279,19 @@ This section will guide you to:
 kubectl label nodes <master-node-name> <label-key>=<label-value>
 
 
+```
+FOR EXAPMLE:
+
+```
+kubectl label nodes ip-172-31-13-17 noderole=master
+
+```
+ 
+- Check the label
+```
 kubectl get nodes --show-labels
 
 ```
-
- 
-
 ### Step2: Create an html file on the master node
 - Create a /mnt/data directory and navigate to it
 
@@ -728,3 +735,61 @@ cat /etc/foo/password
 
 
 -------------------------------------------------------------------------------------------------------------
+# Docker Secret
+Let's say you have a username and password that you want to use as a secret.
+
+First, we initialize Docker in swarm mode (if you haven't done so already):
+
+```
+
+docker swarm init
+
+```
+
+- Create a file with your secret information. For example, let's put a password in a file:
+
+
+```
+
+echo "SuperSecretPassword123" > password.txt
+
+```
+
+Now, we can create a Docker secret from this file:
+
+
+```
+
+docker secret create my_db_password password.txt
+
+```
+
+After that, you can verify that the secret is created by listing all Docker secrets:
+
+
+```
+
+docker secret ls
+
+```
+
+Then, you can use this secret in your Docker services. For example, if you have a database service, you can use it like this:
+
+
+```
+
+docker service create --name my_database --secret my_db_password my_database_image
+
+```
+
+- In this example, my_database_image would be the image for your database service, which should be configured to use the secret from /run/secrets/my_db_password.
+
+- Remember to delete the password.txt file after creating the Docker secret for security reasons:
+
+
+```
+
+rm password.txt
+```
+- Please note that this is a simple example, and real-world usage might require more complex setups, including different Docker compose or stack files and secrets usage for different services.
+

@@ -1,0 +1,9 @@
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: service-demo
+spec:
+  ports:
+    - port: 8080
+      targetPort: 80
