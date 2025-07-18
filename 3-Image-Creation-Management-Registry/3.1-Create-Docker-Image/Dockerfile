@@ -1,5 +1,5 @@
 # Use Ubuntu as the base image
-FROM ubuntu
+FROM ubuntu:24.10
 
 # Update the package list
 RUN apt-get update
